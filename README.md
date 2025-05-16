@@ -18,6 +18,8 @@ This repository contains a literature review and an interactive SurVis browser c
 - Visuals from each paper with descriptions
 
 ---
+## [View Full Literature Review (PDF)](./Mujawar25cw3.pdf)
+
 
 ## Live Literature Browser
 
