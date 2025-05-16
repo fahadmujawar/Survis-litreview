@@ -1,66 +1,61 @@
-# SurVis - Visual Literature Browser
+# Literature Review: Generative AI for Medical X-ray Image Synthesis using Transformers, LoRA, and Diffusion Models
+
+**Author:** Fahad M Mujawar  
+**Module:** COMP4037 – Research Methods (Coursework 3)  
+**Supervisor:** Ulrik Torben Buchholtz  
+**University of Nottingham**
+
+---
+
+## Project Overview
+
+This repository contains a literature review and an interactive SurVis browser covering 10 key research papers in the area of synthetic medical X-ray image generation using generative AI models — including Transformers, LoRA/QLoRA, and Diffusion models.
+
+### Key Components:
+- Paper summaries with focus on methodology and evaluation types
+- Literature classification and histogram
+- A SurVis-powered interactive browser
+- Visuals from each paper with descriptions
+
+---
+
+## Live Literature Browser
+
+Click to explore the interactive SurVis browser:
+
+**[Survis Browser](https://fahadmujawar.github.io/Survis-litreview/src/index.html)**
 
 ![Screenshot](/doc/survis.png)
+---
 
-SurVis is a flexible online browser to present and analyze scientific literature. The system is made for authors of survey articles, theses, or books who want to share their references in a user-friendly way. All you need to start is a bib file and a list of keywords for your papers.
+## Acknowledgements
 
-Test SurVis with a reference literature database: http://dynamicgraphs.fbeck.com
+### Research Structure and Methodology
 
-## How To Use SurVis for Your Literature Collection
+This project follows the literature review structure outlined in:
 
-Dowload the [latest SurVis release](https://github.com/fabian-beck/survis/releases/latest) or fork this repository.
+> Firat, E. E., Joshi, A., & Laramee, R. S. (2022). *Interactive Visualization Literacy: The State-of-the-Art*. Information Visualization, 21(3), 285–310. [https://doi.org/10.1177/14738716221081831](https://doi.org/10.1177/14738716221081831)
 
-To start SurVis, open 'src/index.html' in your browser.
+The evaluation classification strategy, SurVis screenshot, histogram, and summary format are directly inspired by their state-of-the-art review approach. Their work served as both a model and benchmark.
 
-The bibliography data is stored in 'bib/references.bib' in BibTeX format.
+### SurVis Framework
 
-Supplemental data is contained in 'src/data/':
-* 'tag_categories.js': list of special tag categories; they can be used as a prefix for the tags and appear, for instance, 'a:b' refers to tag 'b' in tag category 'a'
-* 'authorized_tags.js': tags that are defined through a description (highlighted in SurVis, description appears as a tooltip)
-* 'search_stopwords.js': a list of stopwords used to exclude terms from search queries
-* 'papers_pdf' (optional): PDF files of the papers, please use the BibTeX id as a file name
-* 'papers_img' (optional): PNG thumbnails for the papers, please use the BibTeX id as a file name
+This literature browser is powered by **SurVis**, an open-source visual interface for survey authors:
 
-Please do not edit the files in 'src/data/generated/' because they are created automatically. 
+If using SurVis in your own work, please cite:
+> Beck, F., Koch, S., & Weiskopf, D. (2016). *Visual Analysis and Dissemination of Scientific Literature Collections with SurVis*. IEEE Transactions on Visualization and Computer Graphics, 22(1), 180–189. [https://doi.org/10.1109/TVCG.2015.2467757](https://doi.org/10.1109/TVCG.2015.2467757)
 
-After completing your changes, just run 'update_data.py' with Python 3. Reload SurVis in the browser to see the changed bibliography. The script will continue to check for updates on the bib file until you stop it.
+SurVis is developed and maintained by [Fabian Beck](https://research.fbeck.com). Visit [https://github.com/fabian-beck/survis](https://github.com/fabian-beck/survis) to learn more.
 
-If the edit mode is activated, BibTeX entries can be modified in the browser, but are not stored in the 'bib' directory. To make those changes persistent, use 'download BibTex' in SurVis and copy the BibTeX data to your bib file in the 'bib' directory. You can also use the features to save and load the data from local storage of the browser; be careful, however, these features are still experimental.
+---
 
-Further properties of SurVis, such as the title of the page, can be modified in the file 'src/properties.js'. For the publication of your literature collection, you should usually deactivate the edit mode in the properties ('editable = false;').
+## 🛠️ How to Run Locally
 
-Enjoy SurVis and send feedback if you like.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/fahadmujawar/Survis-litreview
+   ```
+2. Open `src/index.html` in your browser.   
 
-## Learn more
 
-We've published a paper about SurVis at VAST 2015 - please reference it if you use or want to refer to SurVis in one of your publications. 
-
-Beck, Fabian; Koch, Sebastian; Weiskopf, Daniel: Visual Analysis and Dissemination of Scientific Literature Collections with SurVis. In: IEEE Transactions on Visualization and Computer Graphics (2016).
-
-* DOI: http://dx.doi.org/10.1109/TVCG.2015.2467757
-* Preview video: https://vimeo.com/136206061 
-
-## List of Literature Collections Using SurVis
-
-* Dynamic Graph Visualization - http://dynamicgraphs.fbeck.com
-* Visualizing Group Structures in Graphs - http://groups-in-graphs.corinna-vehlow.com/
-* Performance Visualization - http://idav.ucdavis.edu/~ki/STAR/
-* Visualization for Software Reuse - http://www.cos.ufrj.br/~schots/survis_reuse/
-* Sparklines - http://sparklines-literature.fbeck.com/
-* Survey of Surveys - http://sos.swansea.ac.uk/
-* Visual Approaches for Analyzing Scientific Literature and Patents - http://ieg.ifs.tuwien.ac.at/~federico/LiPatVis/
-* Visualizing High-Dimensional Data - http://www.sci.utah.edu/~shusenl/highDimSurvey/website/
-* Visualization of Cultural Heritage Collection Data - https://danubevislab.github.io/collectionvis/
-* Survey of Visual Summaries - http://graphics.cs.wisc.edu/Vis/vis_summaries/
-* Optimization of Parallel Computing Systems - http://www.smemeti.com/slr/
-* Deep Learning Visualizations - https://snie2012.github.io/deep-learning-vis-collection/
-* Visualization in Astrophysics - https://tdavislab.github.io/astrovis-survis/
-* Categorical Visualisation Techniques - https://cat-vis.github.io/src/
-
-Please contact me (fabian.beck@uni-bamberg.de) if you know other collections using SurVis.
-
-## Contact
-
-Fabian Beck
-
-http://research.fbeck.com
+###  _This repository was created as part of MSc Computer Science with AI coursework at the University of Nottingham._
