@@ -49,7 +49,7 @@ SurVis is developed and maintained by [Fabian Beck](https://research.fbeck.com).
 
 ---
 
-## 🛠️ How to Run Locally
+## How to Run Locally
 
 1. Clone the repository:
    ```bash
